@@ -1,0 +1,10 @@
+
+.text-center
+  = image_tag @event.image.url(:medium)
+
+= render 'form'
+
+.text-center
+  = link_to "Delete Event ", event_path(@event), method: :delete, data: { confirm: "Delete this event?" }
+  |
+  = link_to " Cancel", events_path

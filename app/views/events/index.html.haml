@@ -1,0 +1,34 @@
+.posts-wrapper.row
+  -@events.each do |event|
+    .post
+      .post-head
+        .name
+          =event.title
+      .post-body
+        .row
+          .col-md-3
+            .left-block
+              .image
+                =link_to (image_tag event.image.url(:medium), class:'img-responsive'), event_path(event)
+          .col-md-9
+            .right-block
+              .location
+                Location: University of Colorado at Colorado Springs
+              .time
+                Time: October 4, 2016 @ 15:00
+              .more-info
+                This is a sample description made simply for demonstration purposes. Please ignore what the rest of this
+                %br
+                paragraph says for it actually is a waste of space.
+                %br
+                %br
+                So long, and thanks for all the fish.
+      .caption
+        .row
+          .col-md-9
+          .col-md-1
+            =link_to "Directions", '#'
+          .col-md-1
+            =link_to "Email Me", '#'
+          .col-md-1
+            =link_to "More Info", '#'

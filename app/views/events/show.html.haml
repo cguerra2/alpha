@@ -1,0 +1,13 @@
+.posts-wrapper.row
+  .post
+    .post-head
+      .name
+        Current Event
+    .image.center-block
+      =image_tag @event.image.url(:medium)
+    %p.caption
+      =@event.title
+    .text-center
+      =link_to "Cancel", events_path
+      |
+      = link_to "Edit Event", edit_event_path(@event)

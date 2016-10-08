@@ -1,0 +1,165 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+body {
+  background-color: #fafafa;
+  font-family: proxima-nova, 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+
+#topnavbar {
+margin: 0;
+  width: 100%;
+}
+
+#topnavbar.affix {
+  position: fixed;
+  top: 0;
+}
+
+#banner {
+  background-color: #666666;
+  background: url("banner-colorado.jpeg");
+  background-size: cover;
+  height: 220px;
+  width: auto;
+}
+
+.navbar-brand {
+  a {
+    color: #125688;
+  }
+}
+
+.navbar-default {
+  background-color: #fff;
+  height: 54px;
+  .navbar-nav li a {
+    color: #125688;
+  }
+}
+
+.navbar-container {
+  width: auto;
+  margin: 0 auto;
+}
+
+.posts-wrapper {
+  padding-top: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.post {
+  background-color: #fff;
+  border-color: #edeeee;
+  border-style: solid;
+  border-radius: 3px;
+  border-width: 1px;
+  margin-bottom: 30px;
+}
+
+.post-head {
+  height: 60px;
+  padding: 20px 20px;
+  color: #125688;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 15px;
+  .thumbnail {}
+  .name {
+    display: block;
+  }
+  border-bottom: 1px solid #7da6ef;
+}
+
+.post-body{
+  .left-block{
+    .image {
+      border-bottom: 1px solid #eeefef;
+      border-top: 1px solid #eeefef;
+    }
+  }
+  .right-block{
+    .location{
+      display: block;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .time{
+      display: block;
+      font-size: 18px;
+    }
+    .more-info{
+      display: block;
+      font-size: 14px;
+    }
+  }
+}
+
+
+.caption {
+  padding: 14px 14px;
+  font-size: 15px;
+  line-height: 10px;
+  border-top: 1px solid #7da6ef;
+}
+
+.form-wrapper {
+  width: 60%;
+  margin: 20px auto;
+  background-color: #fff;
+  padding: 40px;
+  border: 1px solid #eeefef;
+  border-radius: 3px;
+}
+
+.edit-links {
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+#wrapper {
+  padding-left: 200px;
+  transition: all 0.4s ease 0s;
+}
+
+#sidebar-wrapper {
+  margin-left: -200px;
+  left: 200px;
+  width: 200px;
+  background: #CCC;
+  position: absolute;
+  height: 90%;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.4s ease 0s;
+}
+
+#page-content-wrapper {
+  width: 100%;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: auto;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,87 @@
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Alpha
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+
+
+  #banner.container
+    .row
+
+  %body
+    %nav.navbar.navbar-default
+      .navbar-container
+        .navbar-header
+          %button.navbar-toggle.collapsed{"data-target" => "#bs-navbar-collapse-1", "data-toggle" => "collapse", type: "button"}
+            %span.sr-only Toggle Navigation
+            %span.icon-bar
+            %span.icon-bar
+          .navbar-brand= link_to "Home", root_path
+        .collapse.navbar-collapse#bs-navbar-collapse-1
+          %ul.nav.navbar-nav.navbar-left
+            %li
+              = link_to "Calendar", new_event_path
+            %li
+              = link_to "Map View", '#'
+            %li
+              = link_to "Happening Today", '#'
+          %ul.nav.navbar-nav.navbar-right
+            %form.navbar-form.navbar-left{:role => "search"}
+              .form-grouo
+                %input.form-control{:placeholder => "Search", :type => "text"}
+                %button.btn.btn-default{:type => "submit"} Submit
+  #wrapper
+    #sidebar-wrapper
+      .well.sidebar-nav
+        %ul.nav-header Major Categories
+        %ul.nav.nav-list
+          %ui.nav-header Music
+          %li
+            = link_to "Concerts", '#'
+          %li
+            = link_to "Music Festivals", '#'
+          %li
+            = link_to "Orchestra", '#'
+          %ui.nav-header Sports
+          %li
+            = link_to "Football", '#'
+          %li
+            = link_to "Baseball", '#'
+          %li
+            = link_to "Basketball", '#'
+          %li
+            = link_to "Soccer", '#'
+          %ui.nav-header Art
+          %li
+            = link_to "Galleries", '#'
+          %li
+            = link_to "Theater", '#'
+          %li
+            = link_to "Dance", '#'
+          %ui.nav-header Activities
+          %li
+            = link_to "Cycling", '#'
+          %li
+            = link_to "Running", '#'
+          %li
+            = link_to "Fund Raisers", '#'
+          %li
+            = link_to "For Kids", '#'
+          %ui.nav-header Local
+          %li
+            = link_to "Festivals", '#'
+          %li
+            = link_to "Farmer's Market", '#'
+          %lu.nav-header
+            = link_to "Other", '#'
+    #page-content-wrapper
+      .page-content
+        .container
+          .row
+            .col-md-12
+              .container
+                -flash.each do |name, msg|
+                  = content_tag :div, msg, class: [:alert, alert_for(name)]
+              = yield
